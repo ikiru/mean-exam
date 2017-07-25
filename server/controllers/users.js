@@ -44,26 +44,6 @@ module.exports = {
     });
   },
 
-  // Authenticate the passwords => controller with boolean
-  authenticate: function(req, res) {
-    User.findOne({ email: req.body.email }, function(err, user) {
-      if (err) {
-        return res.json(err);
-      }
-      if (user && user.authenticate(req.body.password)) {
-        req.session.user_id = user._id;
-        return res.json(user);
-      }
-      return res.json({
-        errors: {
-          login: {
-            message: "Invalid credentials"
-          }
-        }
-      });
-    });
-  },
-
   // Logout:  destroys session variable Id => controller
   logout: function(req, res) {
     if (req.session.user_id) {
