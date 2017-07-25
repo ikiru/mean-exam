@@ -13,6 +13,10 @@ let QuestionSchema = new mongoose.Schema(
       type: String,
       required: [true, "Answer cannot be blank"],
       minlength: [5, "Answer should be at least 5 characters"]
+    },
+
+    like: {
+      type: Number
     }
   },
   { timestamps: true }

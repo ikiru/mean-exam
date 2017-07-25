@@ -7,13 +7,29 @@ import { AppRoutingModule } from "./app-routing.module";
 
 // component
 import { AppComponent } from "./app.component";
+import { AddComponent } from "./add/add.component";
+import { AnswerComponent } from "./answer/answer.component";
+import { HomeComponent } from "./home/home.component";
+import { DashboardComponent } from "./dashboard/dashboard.component";
 
 // Services
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [
+    AppComponent,
+    AddComponent,
+    AnswerComponent,
+    HomeComponent,
+    DashboardComponent
+  ],
   imports: [BrowserModule, HttpModule, FormsModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [
+    AppComponent,
+    AddComponent,
+    AnswerComponent,
+    HomeComponent,
+    DashboardComponent
+  ]
 })
 export class AppModule {}
