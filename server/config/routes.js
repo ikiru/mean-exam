@@ -1,6 +1,6 @@
 let path = require("path");
 let Users = require("./../controllers/users");
-let Bikes = require("./../controllers/bikes");
+let Questions = require("./../controllers/questions");
 
 module.exports = function(app) {
   // User  routing
@@ -13,11 +13,11 @@ module.exports = function(app) {
   app.get("/session", Users.session);
   app.post("/session", Users.authenticate);
 
-  // bike routing
-  app.get("/bike", Bikes.index);
-  app.post("/bike", Bikes.create);
-  app.patch("/bike/:id", Bikes.update);
-  app.delete("/bike/:id", Bikes.destroy);
+  // question routing
+  app.get("/question", Questions.index);
+  app.post("/question", Questions.create);
+  app.patch("/question/:id", Questions.update);
+  app.delete("/question/:id", Questions.destroy);
 
   // Path to the Angular Routing
   app.all("*", function(req, res, next) {
