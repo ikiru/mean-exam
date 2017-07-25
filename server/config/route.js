@@ -11,13 +11,10 @@ module.exports = function(app) {
 
   // Session routing
   app.get("/session", Users.session);
-  app.post("/session", Users.authenticate);
 
   // question routing
   app.get("/question", Questions.index);
   app.post("/question", Questions.create);
-  app.patch("/question/:id", Questions.update);
-  app.delete("/question/:id", Questions.destroy);
 
   // Path to the Angular Routing
   app.all("*", function(req, res, next) {

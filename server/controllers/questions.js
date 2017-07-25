@@ -8,7 +8,7 @@ module.exports = {
       if (err) {
         return res.json(err);
       }
-      return res.json(questions);
+      return res.json(question);
     });
   },
 
@@ -18,7 +18,7 @@ module.exports = {
       if (err) {
         return res.json(err);
       }
-      return res.json(questions);
+      return res.json(question);
     });
   }
 };
