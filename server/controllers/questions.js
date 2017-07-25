@@ -12,11 +12,13 @@ module.exports = {
     });
   },
 
-  // Create a bike => sends to DB <= newly created bike
+  // Create a question => sends to DB <= newly created question
   create: function(req, res) {
     Question.create(req.body, function(err, question) {
       if (err) {
         return res.json(err);
-      },
-
-      
+      }
+      return res.json(questions);
+    });
+  }
+};

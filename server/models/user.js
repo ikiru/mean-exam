@@ -8,13 +8,12 @@ let UserSchema = new mongoose.Schema(
       required: [true, "Name cannot be blank"]
     },
 
-    // this will need to be changed *******************************************
     question: [
       {
         type: mongoose.Schema.Types.ObjectId,
         ref: " Question"
       }
-    ]
+    ],
 
     answer: [
       {
@@ -22,8 +21,6 @@ let UserSchema = new mongoose.Schema(
         ref: " Question"
       }
     ]
-
-
   },
   { timestamps: true }
 );
